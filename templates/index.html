@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Token Extractor</title>
+</head>
+<body>
+    <h2>Enter Your Facebook Cookies</h2>
+    <form method="post">
+        <textarea name="cookies" rows="4" cols="50" required></textarea>
+        <br>
+        <button type="submit">Get Token</button>
+    </form>
+
+    {% if token %}
+        <h3>Extracted Token:</h3>
+        <p>{{ token }}</p>
+    {% endif %}
+
+    {% if error %}
+        <h3 style="color: red;">Error:</h3>
+        <p>{{ error }}</p>
+    {% endif %}
+</body>
+</html>
